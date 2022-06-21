@@ -4,6 +4,8 @@ const routerHistory = createWebHistory();
 
 import Home from "@/components/pages/homePage"
 import About from "@/components/pages/aboutPage"
+// import notFoundPage from '@/components/pages/404Page'
+import itemPage from '@/components/pages/itemPage'
 
 const routers = createRouter({
     history: routerHistory,
@@ -15,7 +17,17 @@ const routers = createRouter({
         {
             path:"/about",
             component: About
-        }
+        },
+        {
+            path: '/:itemAlias',
+            name: 'itemAlias',
+            component: itemPage
+        },
+        // {
+        //     path: '/:CatchAll(.*)',
+        //     name: 404,
+        //     component: notFoundPage
+        // }
     ]
 
     

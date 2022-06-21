@@ -11,5 +11,5 @@ export const links = [
     },
 ]
 export const app = {
-    title: "Development in Web with Vue.js."
+    title: "Development in Web with Vue.js.!!!"
 }

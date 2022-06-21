@@ -1,9 +1,8 @@
 <template>
     <div class="md-body">
-        <h1>Home</h1>
         <div class="card__wrapper">
             <div v-for="item in items" :key="item.id">
-                <userCard :name="`${item.lvl} lvl`" :title="item.title">
+                <userCard :name="`${item.lvl} lvl`" :title="item.title" :img="item.img" :alias="item.alias">
                 {{item.descr}}
                 </userCard>
             </div>
@@ -14,7 +13,8 @@
 
 <script>
 
-import userCard from '@/components/UI/userCard.vue'
+import userCard from '@/components/UI/userCard'
+import items from '@/seeders/items'
 
 export default {
     components: {
@@ -22,20 +22,7 @@ export default {
     },
     data() {
         return {
-            items: [
-                {
-                    id: 1,
-                    title: 'Archer',
-                    descr: 'description of Archer',
-                    lvl: 4
-                },
-                {
-                    id: 2,
-                    title: 'Wizard',
-                    descr: 'description of Wizard!!!',
-                    lvl: 4
-                }
-            ]
+            items:items
         }
     }
 }
